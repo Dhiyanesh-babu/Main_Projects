@@ -1,0 +1,57 @@
+<div class="container">
+  <h1 class="mt-4">Tweet Count</h1>
+  <h3>The trend in tweet count for last 7 days</h3>
+  <div id="container" class="mx-auto">
+    <canvas id="chart"></canvas>
+  </div>
+</div>
+
+<script>
+    var Countdata = {{tweetCountData|safe}}
+    var labels = Countdata.map(function(e) {
+       return e.end;
+      });
+    var Countdata = Countdata.map(function(e) {
+       return e.count;
+      });;
+    const config = {
+    type: 'line',
+    data: {
+      labels: labels,
+      datasets: [{
+        label:"count",
+        data: Countdata,
+        backgroundColor: "#90caf9",
+        borderColor: "#64b5f6",
+      }]
+    },
+    options: {
+      plugins: {
+        title: {
+          text: 'Tweet-count in a week',
+          display: true
+        }
+      },
+      scales: {
+        x: {
+          type: 'time',
+          time: {
+            unit: 'day'
+          },
+          title: {
+            display: true,
+            text: 'Date'
+          }
+        },
+        y: {
+          title: {
+            display: true,
+            text: 'Count'
+          }
+        }
+      },
+    },
+  };
+
+</script>
+

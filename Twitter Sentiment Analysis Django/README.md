@@ -1,2 +1,1 @@
-# Twitter_sentiment
-requirments.txt has all the dependencies and packages needed with their version.
+PLease refer the Reports folder for detailed information about the projet

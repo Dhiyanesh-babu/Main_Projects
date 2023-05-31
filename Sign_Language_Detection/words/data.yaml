@@ -1,0 +1,5 @@
+train: ../train/images
+val: ../test/images
+
+nc: 35
+names: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','space','T','U','V','W','X','Y','Z','Fine','Going','He','Father','That','House','Need','Hat']
